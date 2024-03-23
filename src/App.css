@@ -1,7 +1,7 @@
-@import url('https://fonts.google.com/share#how-to-use?selection.family=Roboto+Condensed:ital,wght@0,100..900;1,100..900');
+@import url("https://fonts.google.com/share#how-to-use?selection.family=Roboto+Condensed:ital,wght@0,100..900;1,100..900");
 
 * {
-  font-family: 'roboto', sans-serif;
+  font-family: "roboto", sans-serif;
   font-size: 18px;
 }
 
@@ -157,7 +157,7 @@ button:active {
   background-color: #647299;
   .header {
     color: #eae3db;
-  };
+  }
 
   .toggle-divs {
     background-color: #3b4664;
@@ -171,36 +171,36 @@ button:active {
     background-color: #10111600;
     background: #181f32;
     color: #ffffff;
-  };
-  
+  }
+
   .keypad {
     background: #3b4664;
-  };
+  }
 
   .highlight {
     background: #647299;
     color: #eae3db;
     box-shadow: 0 4px 1px #7684a8;
-  };
-  
+  }
+
   .action {
     background: #d13f30;
     color: #eae3db;
     box-shadow: 0 4px 1px #b94a3d;
-  };
+  }
 
   button {
     background: #eae3db;
     color: #262834;
     box-shadow: 0 4px 1px #d1cecb;
-  };  
+  }
 }
 
 .theme2 {
   background-color: #d1cdcc;
   .header {
     color: #181f32;
-  };
+  }
 
   .toggle-divs {
     background-color: #eae3db;
@@ -214,36 +214,36 @@ button:active {
     background-color: #10111600;
     background: #efefef;
     color: #181f32;
-  };
-  
+  }
+
   .keypad {
     background: #eae3db;
-  };
+  }
 
   .highlight {
     background: #3a8187;
     color: #eae3db;
     box-shadow: 0 4px 1px #2a6267;
-  };
-  
+  }
+
   .action {
     background: #c75401;
     color: #eae3db;
     box-shadow: 0 4px 1px #9b4203;
-  };
+  }
 
   button {
     background: #d1cdcc;
     color: #262834;
     box-shadow: 0 4px 1px #c4c2c1;
-  };  
+  }
 }
 
 .theme3 {
   background-color: #57067f;
   .header {
     color: #f8e96c;
-  };
+  }
 
   .toggle-divs {
     background-color: #17052b;
@@ -257,29 +257,29 @@ button:active {
     background-color: #10111600;
     background: #1e0836;
     color: #f8e96c;
-  };
-  
+  }
+
   .keypad {
     background: #17052b;
-  };
+  }
 
   .highlight {
     background: #57067f;
     color: #eae3db;
     box-shadow: 0 4px 1px #841bb8;
-  };
-  
+  }
+
   .action {
     background: #00dfcd;
     color: #eae3db;
     box-shadow: 0 4px 1px #52a9a1;
-  };
+  }
 
   button {
     background: #1e0836;
     color: #f8e96c;
     box-shadow: 0 4px 1px #45216b;
-  };  
+  }
 }
 
 /* Media Query for smaller screens */
