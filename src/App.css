@@ -40,7 +40,55 @@ h2 {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  gap: 16px;
+}
+
+.toggle-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 70px;
   gap: 4px;
+  margin-left: auto;
+  margin-right: 4px;
+}
+
+.label {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.toggle-divs {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4px;
+  height: 18px;
+  width: 70px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  border-radius: 20px;
+  position: relative;
+  padding: 3px;
+  cursor: pointer;
+}
+
+.toggle-dot {
+  height: 15px;
+  width: 15px;
+  border-radius: 20px;
+  left: 3px;
+  transition: all 0.5s ease-in-out;
+  position: absolute;
+  cursor: pointer;
+}
+
+.center {
+  left: 40%;
+}
+
+.end {
+  left: 80%;
 }
 
 body1 {
@@ -111,6 +159,14 @@ button:active {
     color: #eae3db;
   };
 
+  .toggle-divs {
+    background-color: #3b4664;
+  }
+
+  .toggle-dot {
+    background-color: #d13f30;
+  }
+
   input[type="text"] {
     background-color: #10111600;
     background: #181f32;
@@ -124,16 +180,19 @@ button:active {
   .highlight {
     background: #647299;
     color: #eae3db;
+    box-shadow: 0 4px 1px #7684a8;
   };
   
   .action {
     background: #d13f30;
     color: #eae3db;
+    box-shadow: 0 4px 1px #b94a3d;
   };
 
   button {
     background: #eae3db;
     color: #262834;
+    box-shadow: 0 4px 1px #d1cecb;
   };  
 }
 
@@ -142,6 +201,14 @@ button:active {
   .header {
     color: #181f32;
   };
+
+  .toggle-divs {
+    background-color: #eae3db;
+  }
+
+  .toggle-dot {
+    background-color: #c75401;
+  }
 
   input[type="text"] {
     background-color: #10111600;
@@ -156,16 +223,19 @@ button:active {
   .highlight {
     background: #3a8187;
     color: #eae3db;
+    box-shadow: 0 4px 1px #2a6267;
   };
   
   .action {
     background: #c75401;
     color: #eae3db;
+    box-shadow: 0 4px 1px #9b4203;
   };
 
   button {
     background: #d1cdcc;
     color: #262834;
+    box-shadow: 0 4px 1px #c4c2c1;
   };  
 }
 
@@ -174,6 +244,14 @@ button:active {
   .header {
     color: #f8e96c;
   };
+
+  .toggle-divs {
+    background-color: #17052b;
+  }
+
+  .toggle-dot {
+    background-color: #00dfcd;
+  }
 
   input[type="text"] {
     background-color: #10111600;
@@ -188,15 +266,34 @@ button:active {
   .highlight {
     background: #57067f;
     color: #eae3db;
+    box-shadow: 0 4px 1px #841bb8;
   };
   
   .action {
     background: #00dfcd;
     color: #eae3db;
+    box-shadow: 0 4px 1px #52a9a1;
   };
 
   button {
     background: #1e0836;
     color: #f8e96c;
+    box-shadow: 0 4px 1px #45216b;
   };  
+}
+
+/* Media Query for smaller screens */
+@media screen and (max-width: 600px) {
+  .container {
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: relative;
+    transform: translate(0, 0);
+    margin-top: 30px;
+  }
+
+  .keypad {
+    grid-auto-rows: minmax(65px, auto);
+  }
 }

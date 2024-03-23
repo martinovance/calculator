@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import './App.css';
 
-// import TripleToggleSwitch from 'react-triple-toggle-switch';
+const labels = ['1', '2', '3'];
 
 const App = () => {
-  const [result, setResult] = useState('');
   const [theme, setTheme] = useState('theme1');
+  const [position, setPosition] = useState('initial');
+  const [result, setResult] = useState('');
 
   const toggleTheme = () => {
     switch (theme) {
@@ -25,7 +26,15 @@ const App = () => {
         setTheme('theme1');
         document.body.style.backgroundColor = '#647299';
         break;
-    }
+    };
+
+    if (position === 'initial') {
+      setPosition('center');
+    } else if (position === 'center') {
+      setPosition('end');
+    } else {
+      setPosition('initial');
+    };
   };
 
   const handleClick = (e) => {
@@ -48,24 +57,17 @@ const App = () => {
     }
   }
 
-  // const labels = {
-  //   left: {
-  //     title: 'left',
-  //     value: 'left'
-  //   },
-  //   right: {
-  //     title: 'right',
-  //     value: 'right'
-  //   },
-  //   center: {
-  //     title: 'center',
-  //     value: 'center'
-  //   },
-  // }
+const formatInputValue = (value) => {
+    const formattedValue = value.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+    return formattedValue;
+  };
 
-  // const onChange = (value) => {
-  //   console.log('value',value)
-  // }
+  const handleInput = (e) => {
+    const value = e.target.value;
+    const formattedValue = formatInputValue(value);
+    setResult(formattedValue);
+  };
+
 
   return (
     <div className={`app ${theme}`}>
@@ -74,22 +76,27 @@ const App = () => {
           <h2>calc</h2>
           <div className="toggle">
             <body1>THEME</body1>
-            {/* <h6>1 2 3</h6> */}
             <div>
-            {/* <TripleToggleSwitch
-              labels={labels}
-              onChange={onChange}
-            /> */}
+              <div className="toggle-label">
+                {labels.map((label) => (
+                  <div className="label" key={label}>
+                    {label}
+                  </div>
+                ))}
+              </div>
+              <div className="toggle-divs" onClick={toggleTheme} >
+                <div className={`toggle-dot ${position}`} />
+              </div>
             </div>
-              <button
-                onClick={toggleTheme}
-              >
-                toggleMode
-              </button>
           </div>
         </div>
         <form>
-          <input type="text" placeholder="0" value={result} />
+          <input 
+            type="text" 
+            placeholder="0" 
+            value={formatInputValue(result)} 
+            onChange={handleInput} 
+          />
         </form>
 
         <div className="keypad">
